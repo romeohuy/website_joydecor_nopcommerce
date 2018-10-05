@@ -38,6 +38,7 @@
 
     <!-- We copy the \Logs directory -->
     <Content Include="Logs\**" CopyToPublishDirectory="PreserveNewest" />
+    <None Remove="Themes\MuaBanBinhDinh\preview.jpg" />
 
     <None Update="Areas\Admin\sitemap.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -46,6 +47,36 @@
 
   <ItemGroup>
     <Folder Include="Plugins\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Themes\MuaBanBinhDinh\Views\Catalog\CategoryTemplate.ProductsInGridOrLines.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Common\ContactUs.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Customer\Login.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Customer\Register.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Home\Index.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Product\CompareProducts.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Product\ProductTemplate.Grouped.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Product\ProductTemplate.Simple.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Product\_ProductAttributes.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Product\_ProductDetailsPictures.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\Components\Footer\Default.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\Components\HeaderLinks\Default.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\Components\OrderSummary\Default.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\Components\SearchBox\Default.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\Components\SocialButtons\Default.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\Components\TopMenu\Default.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\Head.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\_ColumnsOne.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\_ColumnsThree.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\_ColumnsTwo.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\_Header.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\_ProductBox.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\_Root.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Shared\_Root.Head.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\ShoppingCart\Wishlist.cshtml" />
+    <None Include="Themes\MuaBanBinhDinh\Views\Web.config" />
+    <None Include="Themes\MuaBanBinhDinh\Views\_ViewImports.cshtml" />
   </ItemGroup>
 
   <!-- This target execute after "Build" target.
