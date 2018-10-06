@@ -94,6 +94,10 @@ img {
     max-width: 100%;
 }
 
+select {
+    height: 28px;
+    line-height: 28px;
+}
 .inputs {
     margin: 2px 0;
 }
@@ -171,7 +175,6 @@ input[type="tel"], textarea {
 /* MASTER PAGE WRAPPERS */
 .master-wrapper-page {
     margin: 0 auto 0;
-    /*width: 1230px;*/
     background: none repeat scroll 0 0 #FFF;
 }
 
@@ -971,13 +974,12 @@ td {
     font-size: 12px;
     letter-spacing: 1px;
     text-align: left;
-    padding: 5px;
+    padding: 10px;
     text-transform: uppercase;
     color: #333;
     margin: 1px 0 0;
-    /*border-top: 1px dotted #333;
-    border-bottom: 1px dotted #333;*/
-    background: #cccccc;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
 }
 
     .block .title strong {
@@ -2400,7 +2402,6 @@ td {
     .home-page-category-grid .category-item {
         text-align: center;
         margin-bottom: 20px;
-        width: 210px;
         height: 180px;
         border: 1px solid #eee;
     }
@@ -2441,7 +2442,7 @@ td {
 
     .product-grid .item-box {
         float: left;
-        padding: 5px 25px 10px 0;
+        padding: 5px 6px 10px 7px;
         text-align: center;
         vertical-align: text-top;
     }
@@ -2454,8 +2455,6 @@ td {
     text-align: left;
     margin: 0;
     padding: 0;
-    width: 210px;
-    height: 280px;
 }
 
     .product-grid .product-item .product-title {
@@ -2487,10 +2486,16 @@ td {
 
 .product-grid .product-item .product-rating-box {
 }
-
+.product-grid .product-item {
+    border: 1px solid #fff;
+    padding: 5px;
+}
+.product-grid .product-item:hover, .product-grid .product-item:focus {
+    border: 1px solid #eeeeee;
+}
 .product-grid .product-item .picture {
     background: none repeat scroll 0 0 #ffffff;
-    border: 1px solid #eeeeee;
+    /*border: 1px solid #eeeeee;*/
     text-align: center;
     height: 140px;
     overflow: hidden;
@@ -2799,7 +2804,6 @@ td {
     .sub-category-grid .sub-category-item, .manufacturer-grid .manufacturer-item, .vendor-grid .vendor-item {
         text-align: center;
         margin: 0px;
-        width: 208px;
         height: 180px;
         border: 1px solid #eee;
     }

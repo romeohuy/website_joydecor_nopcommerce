@@ -82,7 +82,7 @@
             <div class="sub-category-grid">
                 @foreach (var item in Model.SubCategories)
                 {
-                    <div class="item-box">
+                    <div class="col-md-3 item-box">
                         <div class="sub-category-item">
                             <h2 class="title">
                                 <a href="@Url.RouteUrl("Category", new { SeName = item.SeName })" title="@item.PictureModel.Title">
@@ -111,7 +111,7 @@
                 <div>
                     @foreach (var item in Model.FeaturedProducts)
                     {
-                        <div class="item-box">
+                        <div class="col-md-3 item-box">
                             @await Html.PartialAsync("_ProductBox", item)
                         </div>
                     }
@@ -146,8 +146,8 @@
                 <div class="product-list">
                     @foreach (var product in Model.Products)
                     {
-                        <div class="item-box">
-                           @await Html.PartialAsync("_ProductBox", product)
+                        <div class="col-md-12 item-box">
+                            @await Html.PartialAsync("_ProductBox", product)
                         </div>
                     }
                 </div>
@@ -158,8 +158,8 @@
                 <div class="product-grid">
                     @foreach (var product in Model.Products)
                     {
-                        <div class="item-box">
-                           @await Html.PartialAsync("_ProductBox", product)
+                        <div class="col-md-3 item-box">
+                            @await Html.PartialAsync("_ProductBox", product)
                         </div>
                     }
                 </div>

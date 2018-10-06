@@ -59,19 +59,19 @@
                         {
                             ratingPercent = ((Model.ReviewOverviewModel.RatingSum * 100) / Model.ReviewOverviewModel.TotalReviews) / 5;
                         }
-                    <div class="product-rating-box" title="@string.Format(T("Reviews.TotalReviews").Text, Model.ReviewOverviewModel.TotalReviews)">
-                        <div class="rating">
-                            <div style="width: @(ratingPercent)%">
+                        <div class="product-rating-box" title="@string.Format(T("Reviews.TotalReviews").Text, Model.ReviewOverviewModel.TotalReviews)">
+                            <div class="rating">
+                                <div style="width: @(ratingPercent)%">
+                                </div>
                             </div>
                         </div>
-                    </div>
                     }
                 </td>
                 <td class="prices">
                     <div class="price actual-price">@Model.ProductPrice.Price</div>
                     @if (!string.IsNullOrEmpty(Model.ProductPrice.OldPrice))
                     {
-                    <div class="price old-price">@Model.ProductPrice.OldPrice</div>
+                        <div class="price old-price">@Model.ProductPrice.OldPrice</div>
                     }
                 </td>
             </tr>

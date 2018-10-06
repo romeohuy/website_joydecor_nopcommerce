@@ -1497,7 +1497,7 @@
         .product-grid .item-box {
             display: inline-block;
             float: none;
-            padding: 5px 20px;
+            padding: 5px 0px;
         }
 
         .product-grid .product-item .picture {
@@ -1685,8 +1685,6 @@
         float: left;
         list-style-type: none;
         padding: 5px 14px 1px 14px;
-        line-height: 28px;
-        height: 28px;
         background: url(images/top-menu-divider.png) no-repeat 100% 50%;
         z-index: 9;
     }
@@ -1696,14 +1694,14 @@
         }
 
         .header-menu .header-top > ul > li > a {
-            min-height: 20px;
             display: block;
-            line-height: 20px;
             text-transform: uppercase;
             margin-bottom: 3px;
             white-space: nowrap;
             padding: 0 5px;
             font-size: 13px;
+            line-height: 28px;
+            height: 28px;
         }
 
     .header-menu a {

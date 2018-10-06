@@ -79,6 +79,117 @@
     <None Include="Themes\MuaBanBinhDinh\Views\_ViewImports.cshtml" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\AdminHeaderLinks\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\BlogRssHeaderLink\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\CategoryNavigation\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\CheckoutProgress\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\CrossSellProducts\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\CurrencySelector\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\CustomerNavigation\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\EstimateShipping\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\EuCookieLaw\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\ExternalMethods\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\Favicon\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\FlyoutShoppingCart\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\HomepageBestSellers\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\HomepageCategories\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\HomepageNews\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\HomePagePolls\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\HomepageProducts\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\LanguageSelector\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\Logo\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\ManufacturerNavigation\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\NewsletterBox\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\NewsRssHeaderLink\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\OrderTotals\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\PollBlock\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\PopularProductTags\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\PrivateMessagesInbox\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\PrivateMessagesSentItems\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\ProductsAlsoPurchased\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\RecentlyViewedProductsBlock\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\RelatedProducts\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\SelectedCheckoutAttributes\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\StoreThemeSelector\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\TaxTypeSelector\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\TopicBlock\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\VendorNavigation\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+    <Content Update="Themes\MuaBanBinhDinh\Views\Shared\Components\Widget\Default.cshtml">
+      <Pack>$(IncludeRazorContentInPack)</Pack>
+    </Content>
+  </ItemGroup>
+
   <!-- This target execute after "Build" target.
     We use it to clean up folder with plugins from unnecessary and obsolete libraries. -->
   <Target Name="NopTarget" AfterTargets="Build">
