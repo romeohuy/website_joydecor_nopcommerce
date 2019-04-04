@@ -1,7 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Text;
-using Microsoft.AspNetCore.Http;
+﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Nop.Core;
 using Nop.Core.Domain.Catalog;
@@ -22,6 +19,10 @@ using Nop.Web.Areas.Admin.Models.Catalog;
 using Nop.Web.Framework.Controllers;
 using Nop.Web.Framework.Mvc;
 using Nop.Web.Framework.Mvc.Filters;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 
 namespace Nop.Web.Areas.Admin.Controllers
 {
@@ -413,6 +414,20 @@ namespace Nop.Web.Areas.Admin.Controllers
             SuccessNotification(_localizationService.GetResource("Admin.Catalog.Categories.Deleted"));
 
             return RedirectToAction("List");
+        }
+
+        [HttpPost]
+        public virtual IActionResult DeleteSelected(ICollection<int> selectedIds)
+        {
+            if (!_permissionService.Authorize(StandardPermissionProvider.ManageCategories))
+                return AccessDeniedView();
+
+            if (selectedIds != null)
+            {
+                _categoryService.DeleteCategories(_categoryService.GetCategoriesByIds(selectedIds.ToArray()).ToList());
+            }
+
+            return Json(new { Result = true });
         }
 
         #endregion

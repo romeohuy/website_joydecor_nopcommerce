@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using Nop.Core;
 using Nop.Core.Caching;
 using Nop.Core.Data;
@@ -15,6 +12,9 @@ using Nop.Services.Events;
 using Nop.Services.Localization;
 using Nop.Services.Security;
 using Nop.Services.Stores;
+using System;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Nop.Services.Catalog
 {
@@ -116,6 +116,20 @@ namespace Nop.Services.Catalog
                 UpdateCategory(subcategory);
             }
         }
+
+        /// <summary>
+        /// Delete categories
+        /// </summary>
+        /// <param name="categories">Categories</param>
+        public void DeleteCategories(List<Category> categories)
+        {
+            foreach (var category in categories)
+            {
+                category.Deleted = true;
+                UpdateCategory(category);
+            }
+        }
+
 
         /// <summary>
         /// Gets all categories

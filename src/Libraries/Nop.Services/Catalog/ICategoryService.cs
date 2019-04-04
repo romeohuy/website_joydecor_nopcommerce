@@ -1,6 +1,6 @@
-using System.Collections.Generic;
 using Nop.Core;
 using Nop.Core.Domain.Catalog;
+using System.Collections.Generic;
 
 namespace Nop.Services.Catalog
 {
@@ -14,6 +14,12 @@ namespace Nop.Services.Catalog
         /// </summary>
         /// <param name="category">Category</param>
         void DeleteCategory(Category category);
+
+        /// <summary>
+        /// Delete categories
+        /// </summary>
+        /// <param name="categories">Categories</param>
+        void DeleteCategories(List<Category> categories);
 
         /// <summary>
         /// Gets all categories
