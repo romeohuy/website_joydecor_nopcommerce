@@ -27,7 +27,7 @@
         @*we add enctype = "multipart/form-data" because "File upload" attribute control type requires it*@
         <form asp-route="ShoppingCart" method="post" enctype="multipart/form-data" id="shopping-cart-form">
             <div class="table-wrapper">
-                <table class="cart">
+                <table class="cart" id="customer-shopping-cart">
                     <colgroup>
                         <col width="1" />
                         @if (Model.IsEditable)
@@ -54,12 +54,13 @@
                     <thead>
                         <tr class="cart-header-row">
                             <th>
-			                    <span class="item-count">#</span>
-			                </th>
+                                <span class="item-count">#</span>
+                            </th>
                             @if (Model.IsEditable)
                             {
                                 <th class="remove-from-cart" data-hide="w410, w480, w580">
                                     @T("ShoppingCart.Remove")
+                                    <div><input id='mastercheckbox' type='checkbox' /></div>
                                 </th>
                             }
                             @if (Model.ShowSku)
@@ -101,8 +102,8 @@
                             counter++;
                             <tr class="cart-item-row">
                                 <td>
-		                            <span class="item-count">@counter</span>
-		                        </td>
+                                    <span class="item-count">@counter</span>
+                                </td>
                                 @if (Model.IsEditable)
                                 {
                                     <td class="remove-from-cart">
@@ -112,7 +113,7 @@
                                         }
                                         else
                                         {
-                                            <input type="checkbox" name="removefromcart" id="removefromcart@(item.Id)" value="@(item.Id)"/>
+                                            <input type="checkbox" name="removefromcart" id="removefromcart@(item.Id)" class="checkboxGroups" value="@(item.Id)" />
                                         }
                                     </td>
                                 }
@@ -191,7 +192,7 @@
                                         }
                                         else
                                         {
-                                            <input name="itemquantity@(item.Id)" id="itemquantity@(item.Id)" type="text" value="@(item.Quantity)" class="qty-input"/>
+                                            <input name="itemquantity@(item.Id)" id="itemquantity@(item.Id)" type="text" value="@(item.Quantity)" class="qty-input" />
                                         }
                                     }
                                     else
@@ -219,7 +220,7 @@
                     </tbody>
                 </table>
             </div>
-        
+
             <div class="cart-options">
                 @if (Model.IsEditable)
                 {
@@ -233,7 +234,7 @@
                     @await Component.InvokeAsync("SelectedCheckoutAttributes")
                 }
             </div>
-        
+
             @if (Model.IsEditable && Model.Items.Count > 0 && Model.DisplayTaxShippingInfo)
             {
                 var inclTax = workContext.TaxDisplayType == TaxDisplayType.IncludingTax;
@@ -243,13 +244,13 @@
                     @T(inclTax ? "ShoppingCart.TaxShipping.InclTax" : "ShoppingCart.TaxShipping.ExclTax", Url.RouteUrl("Topic", new { SeName = Html.GetTopicSeName("shippinginfo") }))
                 </div>
             }
-        
+
             <div class="cart-footer">
                 @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.OrderSummaryCartFooter })
                 @if (Model.IsEditable)
                 {
-                    <div class="cart-collaterals">                        
-                        @{ 
+                    <div class="cart-collaterals">
+                        @{
                             var estimateShipping = (await Component.InvokeAsync("EstimateShipping")).ToHtmlString();
                         }
 
@@ -286,10 +287,10 @@
                                 </div>
                             </div>
                         }
-						@await Html.PartialAsync("_CheckoutAttributes", Model)
+                        @await Html.PartialAsync("_CheckoutAttributes", Model)
                         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.OrderSummaryContentDeals })
                     </div>
-                } 
+                }
                 <div class="totals">
                     @await Component.InvokeAsync("OrderTotals", new { isEditable = Model.IsEditable })
                     @if (Model.IsEditable)
@@ -311,26 +312,26 @@
                             <div class="terms-of-service">
                                 <div>
                                     <input id="termsofservice" type="checkbox" name="termsofservice" />
-                           			<label for="termsofservice">@T("Checkout.TermsOfService.IAccept")</label>
-									@if (Model.TermsOfServicePopup)
-	                                {
-	                                    <a class="read" id="read-terms">@T("Checkout.TermsOfService.Read")</a>
-	                                    <script>
-	                                        $(document).ready(function() {
-	                                            $('#read-terms').on('click',
-	                                                function(e) {
-	                                                    e.preventDefault();
-	                                                    displayPopupContentFromUrl(
-	                                                        '@Url.RouteUrl("TopicPopup", new {SystemName = "conditionsofuse"})',
-	                                                        '@T("Checkout.TermsOfService")');
-	                                                });
-	                                        });
-	                                    </script>
-	                                }
-	                                else
-	                                {
-	                                    <a class="read" id="read-terms" href="@Url.RouteUrl("Topic", new {SeName = Html.GetTopicSeName("conditionsofuse") })">@T("Checkout.TermsOfService.Read")</a>
-	                                }
+                                    <label for="termsofservice">@T("Checkout.TermsOfService.IAccept")</label>
+                                    @if (Model.TermsOfServicePopup)
+                                    {
+                                        <a class="read" id="read-terms">@T("Checkout.TermsOfService.Read")</a>
+                                        <script>
+                                            $(document).ready(function() {
+                                                $('#read-terms').on('click',
+                                                    function(e) {
+                                                        e.preventDefault();
+                                                        displayPopupContentFromUrl(
+                                                            '@Url.RouteUrl("TopicPopup", new {SystemName = "conditionsofuse"})',
+                                                            '@T("Checkout.TermsOfService")');
+                                                    });
+                                            });
+                                        </script>
+                                    }
+                                    else
+                                    {
+                                        <a class="read" id="read-terms" href="@Url.RouteUrl("Topic", new {SeName = Html.GetTopicSeName("conditionsofuse") })">@T("Checkout.TermsOfService.Read")</a>
+                                    }
                                 </div>
                             </div>
                         }
@@ -363,24 +364,24 @@
                                 }
                                 else
                                 {
-	                                <button type="submit" id="checkout" name="checkout" value="checkout" class="button-1 checkout-button">
-	                                    @T("Checkout.Button")
-	                                </button>
+                                    <button type="submit" id="checkout" name="checkout" value="checkout" class="button-1 checkout-button">
+                                        @T("Checkout.Button")
+                                    </button>
                                 }
                             }
                         </div>
-                        
+
                         if (Model.ButtonPaymentMethodViewComponentNames.Count > 0)
                         {
                             <div class="addon-buttons">
-	                            @*Payment method buttons (e.g. GoogleCheckoutButton, Paypal Express)*@
-	                            @foreach (var pm in Model.ButtonPaymentMethodViewComponentNames)
-	                            {
-	                                @await Component.InvokeAsync(pm)
-	                            }
-	                        </div>
+                                @*Payment method buttons (e.g. GoogleCheckoutButton, Paypal Express)*@
+                                @foreach (var pm in Model.ButtonPaymentMethodViewComponentNames)
+                                {
+                                    @await Component.InvokeAsync(pm)
+                                }
+                            </div>
                         }
-                        
+
                     }
                 </div>
             </div>
@@ -398,3 +399,21 @@
     }
     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.OrderSummaryContentAfter })
 </div>
+<script asp-location="Footer">
+    $(document).ready(function () {
+        $('#mastercheckbox').click(function () {
+            $('.checkboxGroups').attr('checked', $(this).is(':checked')).change();
+        });
+
+        $('#customer-shopping-cart').on('change', 'input[type=checkbox][id!=mastercheckbox][class=checkboxGroups]', function (e) {
+
+            updateMasterCheckbox();
+        });
+    });
+
+    function updateMasterCheckbox() {
+        var numChkBoxes = $('#customer-shopping-cart input[type=checkbox][id!=mastercheckbox][class=checkboxGroups]').length;
+        var numChkBoxesChecked = $('#customer-shopping-cart input[type=checkbox][id!=mastercheckbox][class=checkboxGroups]:checked').length;
+        $('#mastercheckbox').attr('checked', numChkBoxes == numChkBoxesChecked && numChkBoxes > 0);
+    }
+</script>

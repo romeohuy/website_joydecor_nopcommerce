@@ -3,7 +3,7 @@
 
     Html.AppendCssFileParts("~/Themes/Pavilion/Content/css/owl.carousel.css");
     Html.AddScriptParts(ResourceLocation.Footer, "~/Themes/Pavilion/Content/scripts/owl.carousel.min.js");
-	
+
     //page class
     Html.AppendPageCssClassParts("html-home-page");
 }
@@ -18,8 +18,8 @@
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageBeforeBestSellers })
 
         <div class="homepage-middle-wrapper">
-		    @await Component.InvokeAsync("HomepageBestSellers")
-		    @await Component.InvokeAsync("Widget", new { widgetZone = "pavilion_home_page_richblog" })
+            @await Component.InvokeAsync("HomepageBestSellers")
+            @await Component.InvokeAsync("Widget", new { widgetZone = "pavilion_home_page_richblog" })
         </div>
 
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageBeforeNews })
@@ -28,7 +28,8 @@
         @await Component.InvokeAsync("HomepagePolls")
 
         <div class="homepage-bottom-wrapper">
-        	@await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageBottom })
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageBottom })
+            @await Component.InvokeAsync("TopicBlock", new { systemName = "StoreMapAddress" })
         </div>
 
     </div>
