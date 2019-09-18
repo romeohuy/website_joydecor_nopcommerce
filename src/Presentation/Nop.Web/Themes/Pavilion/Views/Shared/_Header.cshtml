@@ -32,9 +32,9 @@
             }
 
             @if (!String.IsNullOrEmpty(taxTypeSelectorHtml.ToHtmlString()) ||
-                 !String.IsNullOrEmpty(currencySelectorHtml.ToHtmlString()) ||
-                 !String.IsNullOrEmpty(languageSelectorHtml.ToHtmlString()) ||
-                 !String.IsNullOrEmpty(headerSelectorWidgetHtml.ToHtmlString()))
+                !String.IsNullOrEmpty(currencySelectorHtml.ToHtmlString()) ||
+                !String.IsNullOrEmpty(languageSelectorHtml.ToHtmlString()) ||
+                !String.IsNullOrEmpty(headerSelectorWidgetHtml.ToHtmlString()))
             {
                 <div class="header-selectors-wrapper">
                     <label>@T("SevenSpikes.Themes.Pavilion.Header.Preferences")</label>
@@ -48,7 +48,6 @@
                 <div class="header-selector-widget" style="display: none;">@headerSelectorWidgetHtml</div>
             }
             <div class="header-links-wrapper">
-                <label>@T("SevenSpikes.Themes.Pavilion.Header.MyAccount")</label>
                 @await Component.InvokeAsync("HeaderLinks")
             </div>
         </div>
@@ -92,7 +91,7 @@
             @await Component.InvokeAsync("FlyoutShoppingCart")
         </div>
     </div>
-    
+
     <div class="header-lower">
         <div class="center">
             @if (showCategoriesInSideMenu)

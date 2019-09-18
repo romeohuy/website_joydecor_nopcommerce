@@ -528,67 +528,67 @@
                     </div>
 
                     @(Html.LocalizedEditor<ProductModel, ProductLocalizedModel>("product-info-localized",
-                    @<div>
-                        <div class="form-group">
-                            <div class="col-md-3">
-                                <nop-label asp-for="@Model.Locales[item].Name" />
-                            </div>
-                            <div class="col-md-9">
-                                <nop-editor asp-for="@Model.Locales[item].Name" />
-                                <span asp-validation-for="@Model.Locales[item].Name"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-3">
-                                <nop-label asp-for="@Model.Locales[item].ShortDescription" />
-                            </div>
-                            <div class="col-md-9">
-                                <nop-textarea asp-for="@Model.Locales[item].ShortDescription" />
-                                <span asp-validation-for="@Model.Locales[item].ShortDescription"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-3">
-                                <nop-label asp-for="@Model.Locales[item].FullDescription" />
-                            </div>
-                            <div class="col-md-9">
-                                <nop-editor asp-for="@Model.Locales[item].FullDescription" asp-template="RichEditor" />
-                                <span asp-validation-for="@Model.Locales[item].FullDescription"></span>
-                            </div>
-                        </div>
+                            @<div>
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <nop-label asp-for="@Model.Locales[item].Name" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <nop-editor asp-for="@Model.Locales[item].Name" />
+                                        <span asp-validation-for="@Model.Locales[item].Name"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <nop-label asp-for="@Model.Locales[item].ShortDescription" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <nop-editor asp-for="@Model.Locales[item].ShortDescription" asp-template="RichEditor" />
+                                        <span asp-validation-for="@Model.Locales[item].ShortDescription"></span>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-3">
+                                        <nop-label asp-for="@Model.Locales[item].FullDescription" />
+                                    </div>
+                                    <div class="col-md-9">
+                                        <nop-editor asp-for="@Model.Locales[item].FullDescription" asp-template="RichEditor" />
+                                        <span asp-validation-for="@Model.Locales[item].FullDescription"></span>
+                                    </div>
+                                </div>
 
-                        <input type="hidden" asp-for="@Model.Locales[item].LanguageId" />
-                    </div>
-                    ,@<div>
-                        <div class="form-group">
-                            <div class="col-md-3">
-                                <nop-label asp-for="Name" />
+                                <input type="hidden" asp-for="@Model.Locales[item].LanguageId" />
                             </div>
-                            <div class="col-md-9">
-                                <nop-editor asp-for="Name" asp-required="true" />
-                                <span asp-validation-for="Name"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-3">
-                                <nop-label asp-for="ShortDescription" />
-                            </div>
-                            <div class="col-md-9">
-                                <nop-textarea asp-for="ShortDescription" />
-                                <span asp-validation-for="ShortDescription"></span>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-md-3">
-                                <nop-label asp-for="FullDescription" />
-                            </div>
-                            <div class="col-md-9">
-                                <nop-editor asp-for="FullDescription" asp-template="RichEditor" />
-                                <span asp-validation-for="FullDescription"></span>
-                            </div>
-                        </div>
-                    </div>
-                    ))
+                                            ,@<div>
+                                                <div class="form-group">
+                                                    <div class="col-md-3">
+                                                        <nop-label asp-for="Name" />
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <nop-editor asp-for="Name" asp-required="true" />
+                                                        <span asp-validation-for="Name"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-3">
+                                                        <nop-label asp-for="ShortDescription" />
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <nop-editor asp-for="@Model.ShortDescription" asp-template="RichEditor" />
+                                                        <span asp-validation-for="ShortDescription"></span>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <div class="col-md-3">
+                                                        <nop-label asp-for="FullDescription" />
+                                                    </div>
+                                                    <div class="col-md-9">
+                                                        <nop-editor asp-for="FullDescription" asp-template="RichEditor" />
+                                                        <span asp-validation-for="FullDescription"></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                            ))
                     <div class="form-group">
                         <div class="col-md-3">
                             <nop-label asp-for="Sku" />
@@ -1298,8 +1298,8 @@
                         </button>
                         <input type="submit" id="btnRefreshTierPrices" style="display: none" />
                         <script>
-                            $(document).ready(function() {
-                                $('#btnRefreshTierPrices').click(function() {
+                            $(document).ready(function () {
+                                $('#btnRefreshTierPrices').click(function () {
                                     $("#tierprices-grid").data('kendoGrid').dataSource.read();
                                     //return false to don't reload a page
                                     return false;
@@ -1451,8 +1451,8 @@
                         </button>
                         <input type="submit" id="btnRefreshAssociatedProducts" style="display: none" />
                         <script>
-                            $(document).ready(function() {
-                                $('#btnRefreshAssociatedProducts').click(function() {
+                            $(document).ready(function () {
+                                $('#btnRefreshAssociatedProducts').click(function () {
                                     //refresh grid
                                     var grid = $("#associatedproducts-grid").data('kendoGrid');
                                     grid.dataSource.read();
@@ -2121,8 +2121,8 @@
                         </button>
                         <input type="submit" id="btnRefreshRelatedProducts" style="display: none" />
                         <script>
-                            $(document).ready(function() {
-                                $('#btnRefreshRelatedProducts').click(function() {
+                            $(document).ready(function () {
+                                $('#btnRefreshRelatedProducts').click(function () {
                                     //refresh grid
                                     var grid = $("#relatedproducts-grid").data('kendoGrid');
                                     grid.dataSource.read();
@@ -2231,8 +2231,8 @@
                         </button>
                         <input type="submit" id="btnRefreshCrossSellProducts" style="display: none" />
                         <script>
-                            $(document).ready(function() {
-                                $('#btnRefreshCrossSellProducts').click(function() {
+                            $(document).ready(function () {
+                                $('#btnRefreshCrossSellProducts').click(function () {
                                     //refresh grid
                                     var grid = $("#crosssellproducts-grid").data('kendoGrid');
                                     grid.dataSource.read();
