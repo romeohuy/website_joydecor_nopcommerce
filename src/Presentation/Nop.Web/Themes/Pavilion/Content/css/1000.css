@@ -42,7 +42,7 @@
 	padding: 20px 25px;
 }
 .side-2 .page-title h1 {
-	font-size: 18px;
+	font-size: 16px;
 	color: #f74258;
 	text-transform: uppercase;
 }
@@ -258,7 +258,7 @@
 .header-menu > ul > li > span {
 	display: block;
 	padding: 5px 20px;
-	font-size: 14px; /*reset zeroing*/
+	font-size: 13px; /*reset zeroing*/
 	font-weight: bold;
 	color: #333;
 	text-transform: uppercase;
