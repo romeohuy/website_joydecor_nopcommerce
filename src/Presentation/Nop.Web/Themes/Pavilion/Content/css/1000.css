@@ -734,24 +734,28 @@
 }
 .footer-block {
 	float: left;
-	width: 25%;
+	width: 20%;
 }
-.footer-block .title {
-	margin: 0 0 12px;
-	border: none;
-	padding: 0;
+.footer-block-last {
+    width: 40%;
+    float: left;
 }
-.footer-block .title:after {
+    .footer-block .title, .footer-block-last .title {
+        margin: 0 0 12px;
+        border: none;
+        padding: 0;
+    }
+.footer-block .title:after ,.footer-block-last .title:after{
 	display: none;
 }
-.footer-block ul {
+.footer-block ul, .footer-block-last ul {
 	display: block !important;
 	border: none;
 }
-.footer-block li {
+.footer-block li, .footer-block-last li {
 	padding: 6px 0;
 }
-.footer-block.quick-contact li {
+.footer-block.quick-contact li, .footer-block-last.quick-contact li {
 	padding: 6px 0 16px;
 }
 .footer-block.quick-contact span {

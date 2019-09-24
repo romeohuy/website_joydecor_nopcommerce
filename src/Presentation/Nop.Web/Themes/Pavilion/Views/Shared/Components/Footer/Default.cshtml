@@ -50,23 +50,23 @@
                     <strong>@T("Footer.MyAccount")</strong>
                 </div>
                 <ul class="list">
-					@if (Model.DisplayCustomerInfoFooterItem)
-	                {
-	                    <li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>
-	                }
-					@if (Model.DisplayCustomerAddressesFooterItem)
-	                {
-	                    <li><a href="@Url.RouteUrl("CustomerAddresses")">@T("Account.CustomerAddresses")</a></li>
-	                }
-	                @if (Model.DisplayCustomerOrdersFooterItem)
-	                {
-	                    <li><a href="@Url.RouteUrl("CustomerOrders")">@T("Account.CustomerOrders")</a></li>
-					}
+                    @if (Model.DisplayCustomerInfoFooterItem)
+                    {
+                        <li><a href="@Url.RouteUrl("CustomerInfo")">@T("Account.MyAccount")</a></li>
+                    }
+                    @if (Model.DisplayCustomerAddressesFooterItem)
+                    {
+                        <li><a href="@Url.RouteUrl("CustomerAddresses")">@T("Account.CustomerAddresses")</a></li>
+                    }
+                    @if (Model.DisplayCustomerOrdersFooterItem)
+                    {
+                        <li><a href="@Url.RouteUrl("CustomerOrders")">@T("Account.CustomerOrders")</a></li>
+                    }
                     @if (Model.ShoppingCartEnabled && Model.DisplayShoppingCartFooterItem)
                     {
                         <li><a href="@Url.RouteUrl("ShoppingCart")">@T("ShoppingCart")</a></li>
                     }
-                	@if (Model.WishlistEnabled && Model.DisplayWishlistFooterItem)
+                    @if (Model.WishlistEnabled && Model.DisplayWishlistFooterItem)
                     {
                         <li><a href="@Url.RouteUrl("Wishlist")">@T("Wishlist")</a></li>
                     }
@@ -84,7 +84,7 @@
                     }
                 </ul>
             </div>
-            <div class="footer-block quick-contact">
+            @*<div class="footer-block quick-contact">
                 <div class="title">
                     <strong>@T("SevenSpikes.Themes.Pavilion.Footer.ContactUs")</strong>
                 </div>
@@ -92,6 +92,18 @@
                     <li class="address"><span>@T("SevenSpikes.Themes.Pavilion.Footer.Address")</span></li>
                     <li class="email"><span>@T("SevenSpikes.Themes.Pavilion.Footer.Email")</span></li>
                     <li class="phone"><span>@T("SevenSpikes.Themes.Pavilion.Footer.Phone")</span></li>
+                </ul>
+            </div>*@
+            <div class="footer-block-last quick-contact">
+                <div class="title">
+                    <strong>@T("SevenSpikes.Themes.Pavilion.Footer.ContactUs")</strong>
+                </div>
+                <ul class="list">
+                    <li><span>@T("SevenSpikes.Themes.Pavilion.Footer.CompanyName.GiaBao")</span></li>
+                    <li class="address"><span>@T("SevenSpikes.Themes.Pavilion.Footer.Address.GiaBao")</span></li>
+                    <li class="address"><span>@T("SevenSpikes.Themes.Pavilion.Footer.Address")</span></li>
+                    <li class="email"><span>Email: @T("SevenSpikes.Themes.Pavilion.Footer.Email.GiaBao")-@T("SevenSpikes.Themes.Pavilion.Footer.Email")</span></li>
+                    <li class="phone"><span>Phone: @T("SevenSpikes.Themes.Pavilion.Footer.Phone")</span></li>
                 </ul>
             </div>
         </div>
