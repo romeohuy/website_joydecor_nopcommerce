@@ -96,15 +96,18 @@
         "url": "https://noithatamber.vn",
         "potentialAction": [{
         "@@type": "SearchAction",
-        "target": "https://noithatamber.vn/instantSearchFor?q={search_term_string}",
+        "target": "https://noithatamber.vn/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
         },{
         "@@type": "SearchAction",
-        "target": "android-app://com.example/https/noithatamber.vn/instantSearchFor?q={search_term_string}",
+        "target": "android-app://com.example/https/noithatamber.vn/search?q={search_term_string}",
         "query-input": "required name=search_term_string"
         }]
         }
     </script>
+    <!-- Global site tag (gtag.js) - Google Ads: 715745612 -->
+    @*<script async src="https://www.googletagmanager.com/gtag/js?id=AW-715745612"></script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-715745612');</script>*@
 </head>
 <body class="@isAndroid23Class @currentPageClass @if (supportRtl){<text>rtl</text>}">
     @RenderBody()
