@@ -32,8 +32,8 @@
                 
                 <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
                     <strong class="current-item" itemprop="name">@Model.ProductName</strong>
-                    <span itemprop="item" itemscope itemtype="http://schema.org/Thing">
-                        <link itemprop="url" href="@Url.RouteUrl("Product", new { SeName = Model.ProductSeName })">
+                    <span itemprop="item" itemscope itemtype="http://schema.org/Thing" id="@Url.RouteUrl("Product", new { SeName = Model.ProductSeName })">
+                        @*<link itemprop="url" id="@Url.RouteUrl("Product", new { SeName = Model.ProductSeName })">*@
                     </span>
                     <meta itemprop="position" content="@position" />
                     @*<strong class="current-item"><a href="@Url.RouteUrl("Product", new { SeName = Model.ProductSeName })">@Model.ProductName</a></strong>*@

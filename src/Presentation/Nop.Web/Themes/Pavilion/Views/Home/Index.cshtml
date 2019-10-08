@@ -29,7 +29,22 @@
 
         <div class="homepage-bottom-wrapper">
             @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageBottom })
-            @await Component.InvokeAsync("TopicBlock", new { systemName = "StoreMapAddress" })
+            <div class="homepage-maps">
+                @await Component.InvokeAsync("TopicBlock", new { systemName = "StoreMapAddress" })
+            </div>
+            <div class="homepage-fanpage">
+                <div class="topic-block-title">
+                    <h2>@T("HomePage.FacebookFanpage.Title")</h2>
+                </div>
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=2200340533598374&autoLogAppEvents=1"></script>
+                <div class="fb-page" data-href="https://www.facebook.com/noithatchungcuAMBER/" data-tabs="timeline" data-width="" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/noithatchungcuAMBER/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/noithatchungcuAMBER/">Nội Thất AMBER</a>
+                    </blockquote>
+                </div>
+            </div>
+            
         </div>
 
     </div>

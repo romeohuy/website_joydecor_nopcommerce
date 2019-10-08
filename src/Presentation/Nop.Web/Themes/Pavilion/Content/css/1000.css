@@ -1402,3 +1402,12 @@
 }
  
 }
+
+.homepage-maps {
+    float: left;
+    width: 66%;
+}
+.homepage-fanpage {
+    float: right;
+    width: 32%;
+}
