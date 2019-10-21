@@ -34,7 +34,9 @@
                 }
                 else
                 {
-                    <input asp-for="EnteredQuantity" class="qty-input" type="text"/>
+                    <button type="button" class="btn btn-lg btn-subtract">-</button>
+                    <input readonly="readonly" asp-for="EnteredQuantity" class="qty-input" type="text"/>
+                    <button type="button" class="btn btn-lg btn-plus">+</button>
                     //when a customer clicks 'Enter' button we submit the "add to cart" button (if visible)
                     <script asp-location="Footer">
                         $(document).ready(function() {
@@ -43,6 +45,20 @@
                                     $("#add-to-cart-button-@Model.ProductId").trigger("click");
                                     return false;
                                 }
+                            });
+
+                            $(".btn-subtract").click(function() {
+                                if ($(".qty-input").val() !== "1") {
+                                    var qty = parseInt($(".qty-input").val());
+                                    qty--;
+                                    $(".qty-input").val(qty);
+                                }
+                            });
+                            
+                            $(".btn-plus").click(function() {
+                                var qty = parseInt($(".qty-input").val());
+                                qty++;
+                                $(".qty-input").val(qty);
                             });
                         });
                     </script>
