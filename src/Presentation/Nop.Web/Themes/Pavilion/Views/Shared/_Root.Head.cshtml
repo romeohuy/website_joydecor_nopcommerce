@@ -116,6 +116,11 @@
     <!-- End Google Tag Manager -->
 </head>
 <body class="@isAndroid23Class @currentPageClass @if (supportRtl){<text>rtl</text>}">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X3PT5F"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     @RenderBody()
     @Html.NopCssFiles(this.Url, ResourceLocation.Footer)
     @Html.NopScripts(this.Url, ResourceLocation.Footer)
@@ -126,11 +131,5 @@
     @await Html.PartialAsync("ContactPanelLeft")
     <!--Facebook Chat-->
     @await Html.PartialAsync("FacebookChat")
-
-
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X3PT5F"
-                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
 </body>
 </html>
