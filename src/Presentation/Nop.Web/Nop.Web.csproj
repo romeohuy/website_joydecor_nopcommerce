@@ -45,7 +45,62 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Plugins\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Content\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Content\Scripts\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Content\Styles\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\CategoryMappingsAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Components\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Components\AdminNavigation\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Components\CategoryMappingsAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Components\ConditionsAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Components\CustomerOverridesAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Components\ManufacturerMappingsAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Components\ProductMappingsAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Components\ProductOverridesAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Components\ScheduleAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Components\VendorMappingsAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Components\WidgetMappingsAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\CustomerOverridesAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\DefaultSettingsAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\EditorTemplates\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\ManufacturerMappingsAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\NopCoreAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\ProductMappingsAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\ProductOverridesAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\Shared\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Areas\Admin\Views\VendorMappingsAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Resources\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Scripts\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Styles\Default\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Styles\textures\" />
+    <Folder Include="Plugins\SevenSpikes.Core\Views\Shared\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Areas\Admin\Views\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Areas\Admin\Views\CloudZoomAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Resources\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Scripts\Carousel\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Styles\Carousel\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Themes\DefaultClean\Content\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Themes\DefaultClean\Content\carousel\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Themes\DefaultClean\Content\cloud-zoom\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Themes\DefaultClean\Content\cloud-zoom\images\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Themes\Pavilion\Content\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Themes\Pavilion\Content\carousel\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Themes\Pavilion\Content\cloud-zoom\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Views\Components\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.CloudZoom\Views\Components\CloudZoom\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Areas\Admin\Views\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Areas\Admin\Views\FacebookShopAdmin\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Resources\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Themes\DefaultClean\Content\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Themes\DefaultClean\Content\css\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Themes\DefaultClean\Content\font\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Views\Components\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Views\Components\FacebookFooter\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Views\Components\FacebookMainBannerImage\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Views\Components\FacebookMainNavigation\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Views\Components\FacebookRelatedProducts\" />
+    <Folder Include="Plugins\SevenSpikes.Nop.Plugins.FacebookShop\Views\FacebookShop\" />
   </ItemGroup>
 
   <!-- This target execute after "Build" target.
