@@ -1,13 +1,13 @@
 ﻿@{
     Layout = "_ColumnsOne";
-
+    Html.AddTitleParts(T("Common.Setting.HomePageTitle").Text);
     Html.AppendCssFileParts("~/Themes/Pavilion/Content/css/owl.carousel.css");
     Html.AddScriptParts(ResourceLocation.Footer, "~/Themes/Pavilion/Content/scripts/owl.carousel.min.js");
-	
+
     //page class
     Html.AppendPageCssClassParts("html-home-page");
 }
-
+<h1 style="color: #F6F6F6; height: 0;">@Html.NopTitle()</h1>
 <div class="page home-page">
     <div class="page-body">
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageTop })
@@ -18,8 +18,8 @@
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageBeforeBestSellers })
 
         <div class="homepage-middle-wrapper">
-		    @await Component.InvokeAsync("HomepageBestSellers")
-		    @await Component.InvokeAsync("Widget", new { widgetZone = "pavilion_home_page_richblog" })
+            @await Component.InvokeAsync("HomepageBestSellers")
+            @await Component.InvokeAsync("Widget", new { widgetZone = "pavilion_home_page_richblog" })
         </div>
 
         @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageBeforeNews })
@@ -28,7 +28,23 @@
         @await Component.InvokeAsync("HomepagePolls")
 
         <div class="homepage-bottom-wrapper">
-        	@await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageBottom })
+            @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.HomePageBottom })
+            <div class="homepage-maps">
+                @await Component.InvokeAsync("TopicBlock", new { systemName = "StoreMapAddress" })
+            </div>
+            <div class="homepage-fanpage">
+                <div class="topic-block-title">
+                    <h2>@T("HomePage.FacebookFanpage.Title")</h2>
+                </div>
+                <div id="fb-root"></div>
+                <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v4.0&appId=2200340533598374&autoLogAppEvents=1"></script>
+                <div class="fb-page" data-href="https://www.facebook.com/noithatchungcuAMBER/" data-tabs="timeline" data-width="" data-height="400" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+                    <blockquote cite="https://www.facebook.com/noithatchungcuAMBER/" class="fb-xfbml-parse-ignore">
+                        <a href="https://www.facebook.com/noithatchungcuAMBER/">Nội Thất AMBER</a>
+                    </blockquote>
+                </div>
+            </div>
+            
         </div>
 
     </div>

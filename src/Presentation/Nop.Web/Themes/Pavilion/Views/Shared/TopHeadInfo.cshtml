@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<div class="admin-header-links">
+    @if (Model.IsCustomerImpersonated)
+    {
+        <div class="impersonate">
+            <span>@string.Format(T("Account.ImpersonatedAs").Text, Model.ImpersonatedCustomerName)</span>
+            <a href="@Url.RouteUrl("Logout")" class="finish-impersonation" title="@T("Account.ImpersonatedAs.Finish.Hint")">@T("Account.ImpersonatedAs.Finish")</a>
+        </div>
+    }
+    @if (Model.DisplayAdminLink)
+    {
+        <a href="@Url.Content("~/Admin")" class="administration">@T("Account.Administration")</a>
+    }
+    @if (!string.IsNullOrEmpty(Model.EditPageUrl))
+    {
+        <a href="@Model.EditPageUrl" class="manage-page">@T("Common.ManagePage")</a>
+    }
+</div>

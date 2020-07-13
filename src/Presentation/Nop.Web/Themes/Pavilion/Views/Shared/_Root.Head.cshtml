@@ -56,8 +56,8 @@
     var currentPageClass = (await Html.PartialAsync("_CurrentPageClass")).ToHtmlString().Trim();
 
     var supportRtl = this.ShouldUseRtlTheme();
-    
-    //event    
+
+    //event
     eventPublisher.Publish(new PageRenderingEvent(this.Html));
 }
 <!DOCTYPE html>
@@ -70,6 +70,7 @@
     <meta name="generator" content="nopCommerce" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0" />
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     @Html.NopHeadCustom()
     @*This is used so that themes can inject content into the header*@
     @await Html.PartialAsync("Head")
@@ -88,12 +89,47 @@
     }
     @Html.NopInlineScripts(this.Url, ResourceLocation.Head)
     <!--Powered by nopCommerce - https://www.nopCommerce.com-->
+    <script type="application/ld+json">
+        {
+        "@@context": "https://schema.org",
+        "@@type": "WebSite",
+        "url": "https://noithatamber.vn",
+        "potentialAction": [{
+        "@@type": "SearchAction",
+        "target": "https://noithatamber.vn/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+        },{
+        "@@type": "SearchAction",
+        "target": "android-app://com.example/https/noithatamber.vn/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+        }]
+        }
+    </script>
+    
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5X3PT5F');</script>
+    <!-- End Google Tag Manager -->
 </head>
 <body class="@isAndroid23Class @currentPageClass @if (supportRtl){<text>rtl</text>}">
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5X3PT5F"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
     @RenderBody()
     @Html.NopCssFiles(this.Url, ResourceLocation.Footer)
     @Html.NopScripts(this.Url, ResourceLocation.Footer)
     <div id="goToTop"></div>
     @Html.NopInlineScripts(this.Url, ResourceLocation.Footer)
+
+    <!--Panel contact left-->
+    @await Html.PartialAsync("ContactPanelLeft")
+    <!--Facebook Chat-->
+    @await Html.PartialAsync("FacebookChat")
 </body>
 </html>

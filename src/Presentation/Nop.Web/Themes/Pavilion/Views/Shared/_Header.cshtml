@@ -32,9 +32,9 @@
             }
 
             @if (!String.IsNullOrEmpty(taxTypeSelectorHtml.ToHtmlString()) ||
-                 !String.IsNullOrEmpty(currencySelectorHtml.ToHtmlString()) ||
-                 !String.IsNullOrEmpty(languageSelectorHtml.ToHtmlString()) ||
-                 !String.IsNullOrEmpty(headerSelectorWidgetHtml.ToHtmlString()))
+                !String.IsNullOrEmpty(currencySelectorHtml.ToHtmlString()) ||
+                !String.IsNullOrEmpty(languageSelectorHtml.ToHtmlString()) ||
+                !String.IsNullOrEmpty(headerSelectorWidgetHtml.ToHtmlString()))
             {
                 <div class="header-selectors-wrapper">
                     <label>@T("SevenSpikes.Themes.Pavilion.Header.Preferences")</label>
@@ -48,12 +48,23 @@
                 <div class="header-selector-widget" style="display: none;">@headerSelectorWidgetHtml</div>
             }
             <div class="header-links-wrapper">
-                <label>@T("SevenSpikes.Themes.Pavilion.Header.MyAccount")</label>
                 @await Component.InvokeAsync("HeaderLinks")
             </div>
         </div>
     </div>
-
+    <div class="header-company-info">
+        <div class="center">
+            <div class="company-header-wrapper">
+                <ul class="company-header">
+                    <li><i class="fa fa-phone"></i><span>@T("SevenSpikes.Themes.Pavilion.Header.CompanyContact.Phone")</span></li>
+                    <li><i class="fa fa-thumbs-up"></i><span>@T("SevenSpikes.Themes.Pavilion.Header.CompanyContact.Quality")</span></li>
+                    <li><i class="fa fa-truck"></i><span>@T("SevenSpikes.Themes.Pavilion.Header.CompanyContact.Service")</span></li>
+                    <li><i class="fa fa-address-book"></i><span>@T("SevenSpikes.Themes.Pavilion.Header.CompanyContact.Guarantee")</span></li>
+                    <li><i class="fa fa-map-marker"></i><span>@T("SevenSpikes.Themes.Pavilion.Header.CompanyContact.Location")</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="header-middle">
         <div class="center">
             <div class="header-logo">
@@ -80,7 +91,7 @@
             @await Component.InvokeAsync("FlyoutShoppingCart")
         </div>
     </div>
-    
+
     <div class="header-lower">
         <div class="center">
             @if (showCategoriesInSideMenu)

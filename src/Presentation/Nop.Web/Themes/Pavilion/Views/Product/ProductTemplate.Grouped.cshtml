@@ -71,7 +71,7 @@
                     }
                     else
                     {
-                    	@await Html.PartialAsync("_ProductDetailsPictures", Model)
+                        @await Html.PartialAsync("_ProductDetailsPictures", Model)
                     }
                     @await Component.InvokeAsync("Widget", new { widgetZone = PublicWidgetZones.ProductDetailsAfterPictures, additionalData = Model })
                     <div class="overview">
@@ -85,7 +85,7 @@
                             </h1>
                         </div>
                         <!--reviews-->
-						@await Html.PartialAsync("_ProductReviewOverview", Model.ProductReviewOverview)
+                        @await Html.PartialAsync("_ProductReviewOverview", Model.ProductReviewOverview)
                         @if (!String.IsNullOrEmpty(Model.ShortDescription))
                         {
                             <div class="short-description">
@@ -137,13 +137,13 @@
                                 @await Html.PartialAsync("_Availability", variant)
                                 <!--price-->
                                 @{
-                                	var dataDictPrice = new ViewDataDictionary(ViewData);
+                                    var dataDictPrice = new ViewDataDictionary(ViewData);
                                     dataDictPrice.TemplateInfo.HtmlFieldPrefix = $"price_{variant.Id}";
                                     @await Html.PartialAsync("_ProductPrice", variant.ProductPrice, dataDictPrice)
                                 }
                                 <!--rental info-->
                                 @{
-	                                var dataDictRental = new ViewDataDictionary(ViewData);
+                                    var dataDictRental = new ViewDataDictionary(ViewData);
                                     dataDictRental.TemplateInfo.HtmlFieldPrefix = $"rental_{variant.Id}";
                                     @await Html.PartialAsync("_RentalInfo", variant, dataDictRental)
                                 }
@@ -171,14 +171,14 @@
                                 }
                                 <!--add to cart-->
                                 @{
-                                	var dataDictAddToCart = new ViewDataDictionary(ViewData);
+                                    var dataDictAddToCart = new ViewDataDictionary(ViewData);
                                     dataDictAddToCart.TemplateInfo.HtmlFieldPrefix = $"addtocart_{variant.Id}";
                                     @await Html.PartialAsync("_AddToCart", variant.AddToCart, dataDictAddToCart)
                                 }
                                 <!--wishlist-->
                                 @{
-                                	var dataDictAddToWishlist = new ViewDataDictionary(ViewData);
-                                	dataDictAddToWishlist.TemplateInfo.HtmlFieldPrefix = $"addtocart_{variant.Id}";
+                                    var dataDictAddToWishlist = new ViewDataDictionary(ViewData);
+                                    dataDictAddToWishlist.TemplateInfo.HtmlFieldPrefix = $"addtocart_{variant.Id}";
                                     @await Html.PartialAsync("_AddToWishlist", variant.AddToCart, dataDictAddToWishlist)
                                 }
                                 <!--price breaks-->
@@ -219,8 +219,13 @@
                     @await Html.PartialAsync("_ProductSpecifications", Model.ProductSpecifications)
                     @await Html.PartialAsync("_ProductTags", Model.ProductTags)
                 </div>
+
+                <div id="facebook-comment">
+                    <div class="fb-comments" data-href="@Context.Request.GetDisplayUrl()" data-width="100%" data-numposts="5"></div>
+                </div>
+                <br />
                 @*we do not display "also purchased" for grouped products
-                @await Component.InvokeAsync("ProductsAlsoPurchased", new { productId = Model.Id })*@
+        @await Component.InvokeAsync("ProductsAlsoPurchased", new { productId = Model.Id })*@
                 @await Component.InvokeAsync("RelatedProducts", new { productId = Model.Id })
             </div>
         </form>

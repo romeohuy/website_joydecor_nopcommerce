@@ -184,6 +184,10 @@
                     @await Html.PartialAsync("_ProductSpecifications", Model.ProductSpecifications)
                     @await Html.PartialAsync("_ProductTags", Model.ProductTags)
                 </div>
+                <div id="facebook-comment">
+                    <div class="fb-comments" data-href="@Context.Request.GetDisplayUrl()" data-width="100%" data-numposts="5"></div>
+                </div>
+                <br />
                 @await Component.InvokeAsync("ProductsAlsoPurchased", new { productId = Model.Id })
                 @await Component.InvokeAsync("RelatedProducts", new { productId = Model.Id })
             </div>
