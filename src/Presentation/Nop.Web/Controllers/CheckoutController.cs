@@ -1176,7 +1176,15 @@ namespace Nop.Web.Controllers
                 {
                     //new address
                     var newAddress = model.BillingNewAddress;
-
+                    if (string.IsNullOrEmpty(newAddress.FullName) == false)
+                    {
+                        var arry = newAddress.FullName.Split(' ');
+                        if (arry.Length > 0)
+                        {
+                            newAddress.LastName = arry.LastOrDefault();
+                            newAddress.FirstName = newAddress.FullName.Replace( string.IsNullOrEmpty(newAddress.LastName) ? string.Empty : newAddress.LastName, string.Empty).Trim();
+                        }
+                    }
                     //custom address attributes
                     var customAttributes = _addressAttributeParser.ParseCustomAddressAttributes(model.Form);
                     var customAttributeWarnings = _addressAttributeParser.GetAttributeWarnings(customAttributes);
@@ -1230,6 +1238,8 @@ namespace Nop.Web.Controllers
                         _workContext.CurrentCustomer.CustomerAddressMappings.Add(new CustomerAddressMapping { Address = address });
                     }
                     _workContext.CurrentCustomer.BillingAddress = address;
+
+
                     _customerService.UpdateCustomer(_workContext.CurrentCustomer);
                 }
 

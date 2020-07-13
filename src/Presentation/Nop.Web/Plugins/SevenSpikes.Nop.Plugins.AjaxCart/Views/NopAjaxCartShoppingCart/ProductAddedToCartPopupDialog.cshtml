@@ -30,15 +30,15 @@
         <a class="continueShoppingLink" href="#">@T("SevenSpikes.NopAjaxCart.ShoppingCartNotificationBoxContinueShopping")</a>
         @if (Model.MiniShoppingCart.DisplayCheckoutButton)
         {
-            var checkoutUrl = "";
-            if (Model.MiniShoppingCart.AnonymousCheckoutAllowed && Model.MiniShoppingCart.CurrentCustomerIsGuest)
-            {
-                checkoutUrl = Url.RouteUrl("LoginCheckoutAsGuest", new { returnUrl = Url.RouteUrl("ShoppingCart") });
-            }
-            else
-            {
-                checkoutUrl = Url.RouteUrl("Checkout");
-            }
+            var checkoutUrl = Url.RouteUrl("Checkout");
+            //if (Model.MiniShoppingCart.AnonymousCheckoutAllowed && Model.MiniShoppingCart.CurrentCustomerIsGuest)
+            //{
+            //    checkoutUrl = Url.RouteUrl("LoginCheckoutAsGuest", new { returnUrl = Url.RouteUrl("ShoppingCart") });
+            //}
+            //else
+            //{
+            //    checkoutUrl = Url.RouteUrl("Checkout");
+            //}
             <a class="viewBasketLink" href="@Url.RouteUrl("ShoppingCart")">@T("SevenSpikes.NopAjaxCart.ShoppingCartNotificationBoxViewYourBasket")</a>
             <div class="checkoutButtonWrapper">
                 <input type="submit" class="button-1 productAddedToCartWindowCheckout" value="@T("Checkout.Button")" onclick="setLocation('@checkoutUrl');" />

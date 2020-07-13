@@ -18,6 +18,9 @@ namespace Nop.Web.Models.Common
             CustomAddressAttributes = new List<AddressAttributeModel>();
         }
 
+        [NopResourceDisplayName("Address.Fields.FullName")]
+        public string FullName { get; set; }
+
         [NopResourceDisplayName("Address.Fields.FirstName")]
         public string FirstName { get; set; }
         [NopResourceDisplayName("Address.Fields.LastName")]

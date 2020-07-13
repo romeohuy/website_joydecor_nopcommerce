@@ -1520,6 +1520,8 @@ ul.company-header li i.fa {
 }
 .item-box .product-title a {
 	display: block;
+    font-size: 15px;
+    font-weight: 600;
 }
 .item-box .product-title + .sku {
 	display: none;
