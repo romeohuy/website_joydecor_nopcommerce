@@ -138,14 +138,14 @@
 
         topMenuCategoryItemsCloned.removeClass('root-category-items').appendTo(sideCategoriesList);
 
-        if ($('.two-columns-area.slider-right-column').length > 0) {
-            sideCategoriesList.css('display', 'block');
-        }
-        else {
+        //if ($('.two-columns-area.slider-right-column').length > 0) {
+        //    sideCategoriesList.css('display', 'block');
+        //}
+        //else {
             $('.category-navigation-title').on('click', function () {
-                sideCategoriesList.slideToggle();
-            });
-        }
+               sideCategoriesList.slideToggle();
+           });
+        //}
     }
 
     function handleCustomerBlocksTitle() {

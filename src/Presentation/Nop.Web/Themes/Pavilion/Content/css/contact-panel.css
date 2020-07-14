@@ -102,12 +102,13 @@
     top: -24px;
     position: absolute;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+    min-width: 250px;
 }
 
     .hotlinefix .phone p {
         line-height: 8px;
         margin-top: 6px;
-        margin-bottom: 4px;
+        margin-bottom: 5px;
     }
 
         .hotlinefix .phone p a {
